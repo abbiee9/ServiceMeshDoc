@@ -1,0 +1,9 @@
+package com.school.service;
+
+import com.school.SchoolModel;
+
+public interface SchoolService {
+	
+	public  SchoolModel getStudentByschoolName(String schoolName);
+
+}

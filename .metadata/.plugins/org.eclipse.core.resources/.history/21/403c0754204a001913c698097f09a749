@@ -1,0 +1,50 @@
+# StudentService-deployment.yaml
+apiVersion: apps/v1
+#endpoint in kubernetes
+kind: Deployment 
+metadata:
+  name: student-v1
+spec:
+#how many replica required in container
+  replicas: 1 
+  #which container it need to replicate
+  selector:  
+  #find the matching lable to replicate
+    matchLabels:  
+      app: studentapp
+      version: "v1"
+  template:  
+    metadta: 
+      labels:
+        app: studentapp
+        version: "v1" 
+    spec:
+      containers:
+      # name of container(name of pod is same + with some key)
+      - name: studentapp 
+      #pull image from this location and deploy to container with given name
+        image: abucontainerregistry.azurecr.io/studentservice:v1 
+        ports:
+        - containerPort: 8500
+        name: https
+ # deployemnmt take care of pod even though if it dies       
+---
+# StudentService-service.yaml
+# to avoid confusion of ip address of pod if it dies , to maintain consistency for commouniticating between pods by having lable
+# service has static ip 
+# can be exposed to outside world
+apiVersion: v1
+kind: Service
+metadata: 
+  name: studentservice
+  #to choose the pod where it need to farword (why no version bcz it can point any version in round robin fashion)
+  lables: 
+    app: studentapp
+spec:
+  ports:
+  - port: 8500
+    name: https
+    #to match with pod (no version bcz it might have chance of canary deployment)
+  selector: 
+    app: studentapp
+        

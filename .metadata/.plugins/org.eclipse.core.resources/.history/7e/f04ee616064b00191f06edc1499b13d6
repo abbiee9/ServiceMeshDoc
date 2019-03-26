@@ -1,0 +1,16 @@
+package com.school.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.school.SchoolModel;
+
+
+@RequestMapping(value="/api")
+public interface IStudentResource {
+
+	@RequestMapping(value="/studentdetails/id/{id}")
+	public ResponseEntity<SchoolModel> getStById(@PathVariable int id);
+	
+}

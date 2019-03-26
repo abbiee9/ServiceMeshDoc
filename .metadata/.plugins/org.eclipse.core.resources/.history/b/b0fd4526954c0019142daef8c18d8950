@@ -1,0 +1,40 @@
+# StudentService-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: student-v12
+spec:
+  replicas: 1 
+  selector:  
+    matchLabels:  
+      app: studentapp
+      version: "v12"
+  template:  
+    metadata: 
+      labels:
+        app: studentapp
+        version: "v12" 
+    spec:
+      containers: 
+      - name: studentapp 
+        image: abucontainerregistry.azurecr.io/studentservice:v12
+        ports:
+        - containerPort: 8900
+          name: https     
+        
+---
+# StudentService-service.yaml
+apiVersion: v1
+kind: Service
+metadata: 
+  name: studentservice
+  labels: 
+    app: studentapp
+spec:
+  ports:
+  - port: 8900
+  # targetPort: 8900
+    name: https
+  selector: 
+    app: studentapp
+        

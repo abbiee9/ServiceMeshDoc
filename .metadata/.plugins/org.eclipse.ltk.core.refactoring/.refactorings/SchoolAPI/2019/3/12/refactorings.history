@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.school&apos; to &apos;com.school.response.model&apos;&#x0D;&#x0A;- Original project: &apos;SchoolAPI&apos;&#x0D;&#x0A;- Original element: &apos;SchoolAPI/src/main/java/com.school&apos;&#x0D;&#x0A;- Renamed element: &apos;SchoolAPI/src/main/java/com.school.response.model&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.school&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.school" name="com.school.response.model" qualified="false" references="true" stamp="1553084102481" textual="false" version="1.0"/>
+</session>

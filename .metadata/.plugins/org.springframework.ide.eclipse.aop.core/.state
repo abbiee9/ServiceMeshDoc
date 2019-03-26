@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="SchoolAPI"/>
+<aop-project name="SchoolApp"/>
+<aop-project name="StudentApp"/>
+<aop-project name="StudentAPI"/>
+</aop-reference-model>

@@ -1,0 +1,39 @@
+# StudentService-deployment.yaml
+apiVesrion: apps/v1
+kind: Deployment #endpoint in kubernetes
+metadata:
+  name: student-v1
+spec:
+  replicas: 1 #how many replica required in container
+  selector:
+    matchLables: 
+      app: studentapp
+      version: "v1"
+  template:  
+    metadta: 
+      lables:
+        app: studentapp
+        version: "v1" 
+    spec:
+      containers:
+      - name: studentapp # name of pod(name of container with some key)
+        image: abucontainerregistry.azurecr.io/studentservice:v1 #container pull image from this location
+        ports:
+        - containerPort: 8500
+        name: https
+        
+---
+# StudentService-service.yaml
+apiVersion: v1
+kind: Service
+metadata: 
+  name: studentservice
+  lables:
+    app: studentapp
+spec:
+  ports:
+  - port: 8500
+    name: https
+  selector:
+    app: studentapp
+        

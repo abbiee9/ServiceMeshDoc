@@ -1,0 +1,29 @@
+package com.student.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+
+import com.student.model.StudentModel;
+import com.student.resource.IStudentResource;
+import com.student.service.StudentService;
+
+@Controller
+public class StudentController implements IStudentResource {
+
+	@Autowired
+	private StudentService studentService;
+	
+	@Override
+	public ResponseEntity<StudentModel> getById(int id) {
+		StudentModel studentModel=studentService.getById(id);
+		return null;
+	}
+
+	@Override
+	public ResponseEntity<StudentModel> getByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,40 @@
+# SchoolService-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: school-v1
+spec:
+  replicas: 1 
+  selector:  
+    matchLabels:  
+      app: schoolapp
+      version: "v1"
+  template:  
+    metadata: 
+      labels:
+        app: schoolapp
+        version: "v1" 
+    spec:
+      containers: 
+      - name: schoolapp 
+        image: abucontainerregistry.azurecr.io/schoolservice:v1 
+        ports:
+        - containerPort: 8080
+          name: https     
+        
+---
+# SchoolService-service.yaml
+apiVersion: v1
+kind: Service
+metadata: 
+  name: schoolservice
+  labels: 
+    app: schoolapp
+spec:
+  ports:
+  - port: 8080
+  # targetPort: 8900
+    name: https
+  selector: 
+    app: schoolapp
+        

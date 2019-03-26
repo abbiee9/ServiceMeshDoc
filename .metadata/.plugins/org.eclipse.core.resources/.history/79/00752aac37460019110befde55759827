@@ -1,0 +1,11 @@
+package com.student.resource;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RequestMapping(value="/api")
+public interface IStudentResource {
+
+	@RequestMapping(value="/get-by-id/{id}")
+	public StudentModel getById(@PathVariable int id);
+}

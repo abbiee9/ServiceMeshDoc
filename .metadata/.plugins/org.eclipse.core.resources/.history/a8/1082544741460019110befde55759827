@@ -1,0 +1,11 @@
+package com.student.controller;
+
+import org.springframework.stereotype.Service;
+
+import com.student.model.StudentModel;
+
+@Service
+public interface StudentService {
+
+	public StudentModel getById(int id);
+}

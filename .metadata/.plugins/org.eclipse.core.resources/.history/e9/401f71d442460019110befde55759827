@@ -1,0 +1,25 @@
+package com.student.service;
+
+import org.springframework.stereotype.Service;
+
+import com.student.model.StudentModel;
+
+@Service
+public class StudentServiceImpl implements StudentService {
+
+	@Override
+	public StudentModel getById(int id) {
+		StudentModel studentModel = new StudentModel();
+		studentModel.setId(id);
+		studentModel.setName("abcd");
+		studentModel.setGender("Male");
+		return studentModel;
+	}
+
+	@Override
+	public StudentModel getByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

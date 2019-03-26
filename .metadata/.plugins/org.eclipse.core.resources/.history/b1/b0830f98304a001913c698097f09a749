@@ -1,0 +1,41 @@
+# StudentService-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: student-v1
+spec:
+  replicas: 1 
+  selector:  
+    matchLabels:  
+      app: studentapp
+      version: "v1"
+  template:  
+    metadata: 
+      labels:
+        app: studentapp
+        version: "v1" 
+    spec:
+      containers: 
+      - name: studentapp 
+        image: abucontainerregistry.azurecr.io/studentservice:v1 
+        ports:
+        - containerPort: 8500
+        name: https     
+---
+# StudentService-service.yaml
+# to avoid confusion of ip address of pod if it dies , to maintain consistency for commouniticating between pods by having lable
+# service has static ip 
+# can be exposed to outside world
+apiVersion: v1
+kind: Service
+metadata: 
+  name: studentservice
+  labels: 
+    app: studentapp
+spec:
+  ports:
+  - port: 8500
+    name: https
+  selector: 
+    app: studentapp
+        

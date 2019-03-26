@@ -1,0 +1,18 @@
+package com.school.controller.impl;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.school.SchoolModel;
+import com.school.controller.ISchoolController;
+
+@RestController
+public class SchoolControllerImpl implements ISchoolController {
+
+	@Override
+	public ResponseEntity<SchoolModel> getStudentByschoolName(String schoolName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

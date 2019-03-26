@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1552546115646_0" label="Java Main Sources" name="main"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1552546115678_1" label="Java Test Sources" name="test"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1553506979192_5" label="DoctorService" name="DoctorService">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/DoctorServiceApi" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/DoctorServiceApp" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1552546144111_2" label="Window Working Set" name="Aggregate for window 1552546144111"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1552551604385_3" label="Window Working Set" name="Aggregate for window 1552551604385"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1553082091260_4" label="Window Working Set" name="Aggregate for window 1553082091260"/>
+</workingSetManager>

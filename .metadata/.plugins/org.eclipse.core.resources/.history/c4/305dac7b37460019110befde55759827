@@ -1,0 +1,5 @@
+package com.student.resource;
+
+public class IStudentResource {
+
+}

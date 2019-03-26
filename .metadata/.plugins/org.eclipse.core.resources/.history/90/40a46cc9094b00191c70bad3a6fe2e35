@@ -1,0 +1,20 @@
+package com.school.service;
+
+import org.springframework.stereotype.Service;
+
+import com.school.SchoolModel;
+
+@Service
+public class SchoolServiceImpl implements SchoolService {
+
+	@Override
+	public SchoolModel getStudentByschoolName(String schoolName) {
+		SchoolModel sm=new SchoolModel();
+		sm.setSchoolName(schoolName);
+		sm.setYearJoined("2011");
+		sm.setPlace("Allahabad");
+		sm.setAddress("Jhusi, Alld");
+		return sm;
+	}
+
+}

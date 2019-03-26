@@ -1,0 +1,4 @@
+2019-03-14 12:18:59,566 [Worker-4: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-03-14 12:20:30,945 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2019-03-14 12:20:45,615 [Worker-15: Launching DoctorService] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\AbuSiddiqi\git\DoctorService
+2019-03-14 12:20:45,619 [Worker-15: Launching DoctorService] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B eclipse:clean eclipse:eclipse

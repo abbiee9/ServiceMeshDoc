@@ -1,0 +1,12 @@
+#for client to take request only in tls
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: schoolappv1desrule
+spec:
+  host: sschoolservice.student.svc.cluster.local
+  trafficPolicy: 
+    tls:
+      mode: ISTIO_MUTUAL
+      
+     

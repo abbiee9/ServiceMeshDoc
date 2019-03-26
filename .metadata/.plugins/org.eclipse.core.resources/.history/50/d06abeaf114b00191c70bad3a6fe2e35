@@ -1,0 +1,8 @@
+package com.student.config;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="schoolservice", url="/api")
+public interface SchoolFeignClient {
+
+}

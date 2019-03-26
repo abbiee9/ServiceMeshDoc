@@ -1,0 +1,17 @@
+package com.school.service;
+
+import com.school.SchoolModel;
+
+public class SchoolServiceImpl implements SchoolService {
+
+	@Override
+	public SchoolModel getStudentByschoolName(String schoolName) {
+		SchoolModel sm=new SchoolModel();
+		sm.setSchoolName(schoolName);
+		sm.setYearJoined("2011");
+		sm.setPlace("Allahabad");
+		sm.setAddress("Jhusi, Alld");
+		return sm;
+	}
+
+}

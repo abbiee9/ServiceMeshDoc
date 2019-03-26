@@ -1,0 +1,10 @@
+package com.school.controller.impl;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.school.controller.ISchoolController;
+
+@RestController
+public class SchoolControllerImpl implements ISchoolController {
+
+}

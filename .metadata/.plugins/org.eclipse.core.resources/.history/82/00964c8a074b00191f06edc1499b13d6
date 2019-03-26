@@ -1,0 +1,13 @@
+package com.school.service;
+
+import com.school.SchoolModel;
+
+public class SchoolServiceImpl implements SchoolService {
+
+	@Override
+	public SchoolModel getStudentByschoolName(String schoolName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
