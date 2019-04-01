@@ -1,0 +1,10 @@
+#Mutual TLS authentication enabled on entire mesh. This policy specifies that all workloads in the mesh will only accept encrypted requests using TLS.
+#this authentication policy has kind MeshPolicy. The name of policy must be default, and it contains no target specification( as it is intended to apply to 
+# all services in the mesh)
+apiVersion: "authentication.istio.io/v1alpha1"
+kind: "MeshPolicy"
+metadata:
+  name: "default"
+spec:
+  peers:
+  - mtls: {}
